@@ -1,0 +1,214 @@
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #181825, #1e1e2f);
+  padding: 15px 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo */
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Navigation links */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 10px 15px;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+/* Hover effect */
+.nav-item::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background: #ff6b6b;
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.nav-item:hover {
+  color: #00d4ff;
+}
+
+.nav-item:hover::after {
+  width: 100%;
+  left: 0;
+  background: #00d4ff;
+}
+
+/* Active link styles */
+.nav-item.active {
+  color: #00d4ff;
+}
+
+.nav-item.active::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #00d4ff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+ 
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .nav-links a:first-child {
+    color: #ffdd57;
+  }
+ 
+  .nav-links a:last-child {
+    color: #ff4b5c;
+  }
+}
+
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 999;
+}
+
+.sidebar-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.slidebar {
+  position: fixed;
+  top: 0;
+  left: -280px;
+  width: 280px;
+  height: 100vh;
+  background: linear-gradient(135deg, #181825, #1e1e2f);
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.2);
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+
+.slidebar.open {
+  left: 0;
+}
+
+.slidebar-header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  color: #fff;
+}
+
+.slidebar-content {
+  padding: 1rem 0;
+  margin-top: -40px;
+}
+
+.slidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.slidebar-menu li {
+  padding: 0.3rem 1rem;
+  margin-top: 0rem;
+}
+
+.slidebar-menu li a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.1rem 0;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+/* Sidebar active and hover effects */
+.slidebar-menu li a:hover {
+  color: #00d4ff;
+}
+
+.slidebar-menu li a.active {
+  color: #00d4ff;
+}
+
+.slidebar-menu li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #00d4ff;
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.slidebar-menu li a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.slidebar-menu li a.active::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Hamburger button style */
+.hamburger-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  color: #fff;
+}
+
+.tagline {
+  color: #e36767;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  text-align: center;
+}

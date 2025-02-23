@@ -1,0 +1,150 @@
+/* General Styles */
+.help-support-container {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+}
+
+  
+
+.title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* FAQ Section */
+.faq-section {
+    margin-bottom: 2rem;
+}
+
+.section-title {
+    display :flex;
+    color :#073260;
+}
+
+.faq-list {
+    border-top: 1px solid #ddd;
+}
+
+.faq-item {
+    padding: 1rem 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-size: 1.2rem;
+    color: #333;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem 0;
+    transition: color 0.3s;
+}
+
+.faq-question:hover {
+    color: #0c1218;
+}
+
+.faq-answer {
+    margin-top: 0.5rem;
+    color: #21232c;
+}
+
+/* Contact Section */
+.contact-section p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+
+/* Report Section */
+.report-section {
+    margin-top: 2rem;
+}
+
+.report-button {
+    padding: 0.5rem 0.5rem;
+    margin-left: 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #0d3c6f;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.report-button:hover {
+    background-color: #0b488a;
+}
+
+.report-form {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.report-form input, .report-form textarea {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.submit-button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    color: white;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #218838;
+}
+
+.success-message {
+    color: #28a745;
+    margin-top: 0.5rem;
+}
+
+/* Live Chat Button */
+.live-chat-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 0.8rem 1.2rem;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    background-color: #17a2b8;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.live-chat-button:hover {
+    background-color: #117a8b;
+}
+#root{
+    background-image: url('/bg.jpg'); /* Absolute path from public folder */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+  }

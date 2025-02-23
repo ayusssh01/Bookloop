@@ -1,0 +1,77 @@
+.footer-container {
+    background: linear-gradient(135deg, #181825, #1e1e2f);
+    color: #f0f0f0;
+    padding: 30px 15px; /* Reduced padding */
+    font-family: "Poppins", sans-serif;
+    animation: fadeIn 1.2s ease-in-out;
+    bottom: 0; 
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.footer-brand {
+    max-width: 250px; /* Restrict width to save space */
+}
+
+.footer-brand h2 {
+    font-size: 22px; /* Reduced size */
+    color: #ffcc00;
+    margin-bottom: 8px;
+}
+
+.footer-links h3,
+.footer-contact h3,
+.footer-social h3 {
+    font-size: 16px; /* Smaller text */
+    color: #ffcc00;
+    margin-bottom: 10px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin: 4px 0;
+}
+
+.footer-links a {
+    font-size: 14px;
+    color: #ddd;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+    display: inline-block;
+}
+
+.footer-links a:hover {
+    color: #ffcc00;
+}
+
+.footer-social .social-icons {
+    display: flex;
+    gap: 10px; /* Less spacing */
+}
+
+.footer-social a {
+    font-size: 18px; /* Slightly smaller */
+    color: #ffcc00;
+}
+
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 10px;  /* Reduce space above */
+    font-size: 12px;  /* Make text smaller */
+    color: whitesmoke;
+    border-top: 1px solid #444;
+    padding: 5px 0;  /* Reduce top & bottom padding */
+    
+}

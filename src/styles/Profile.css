@@ -1,0 +1,199 @@
+/* Overall Page Styling */
+.profile-container {
+  max-width: 750px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #635d55; /* Soft neutral background */
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  font-family: 'Poppins', sans-serif;
+  color: #2c2c2c;
+  text-align: center;
+}
+
+/* Card Styling */
+.card {
+  background: #f4f4f4a4; /* Pure white for contrast */
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+/* Headings */
+h3 {
+  font-size: 1.5rem;
+  color: rgb(9, 9, 9);
+  border-radius: 10px;
+  width: 100%;
+}
+
+/* Profile Details */
+.profile-details p {
+  font-size: 1.2rem;
+  color: #444;
+  text-align: left;
+  margin-left: 60px;
+}
+
+/* Activity Section */
+.activity-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.activity-item {
+  background: #3b6d9e; /* Deep blue */
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 12px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.activity-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.25);
+}
+
+.full-width {
+  grid-column: span 2;
+}
+
+/* Progress Bar */
+progress {
+  width: 100%;
+  height: 12px;
+  border-radius: 6px;
+  background: #ddd;
+}
+
+progress::-webkit-progress-value {
+  background: #28a745;
+}
+
+/* Credit History Table */
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.history-table th {
+  background: #3b6d9e;
+  color: white;
+}
+
+.history-table tr:nth-child(even) {
+  background: #f2f2f2;
+}
+
+.history-table tr:hover {
+  background: #e0e0e0;
+}
+
+/* Buttons */
+.edit-button, .change-password-button, .logout-button, .buy-credits-button {
+  width: 220px;
+  padding: 12px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.edit-button, .change-password-button, .buy-credits-button {
+  background: #155493;
+  color: white;
+}
+
+.edit-button:hover, .change-password-button:hover, .buy-credits-button:hover {
+  background: #00254d;
+}
+
+.logout-button {
+  background: #d9534f;
+}
+
+.logout-button:hover {
+  background: #c9302c;
+}
+
+/* Buy Credits Modal */
+.buy-credits-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  width: 400px;
+  text-align: center;
+}
+
+/* Modal Styling */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  width: 400px;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profile-container {
+      max-width: 95%;
+      padding: 20px;
+  }
+
+  .activity-grid {
+      grid-template-columns: 1fr;
+  }
+
+  .edit-button, .change-password-button, .logout-button, .buy-credits-button {
+      width: 100%;
+  }
+
+}
+.button-group{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.edit-button, .change-password-button, .buy-credits-button {
+  width: 20%;
+}
+.change-password-button{
+  width:30%;
+}
+
+.nav-buttons button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  background-color: #f3f4f6;
+  color: #4b5563;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3sease;
+  flex: 1;
+  min-width: 120px;
+  text-align: center;
+}

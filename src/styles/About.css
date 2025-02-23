@@ -1,0 +1,261 @@
+/* General Styles */
+.about-container {
+    font-family: "Arial", sans-serif;
+    text-align: center;
+    padding: 40px 0; /* Changed from 40px 20px to remove extra padding */
+    background: linear-gradient(135deg, #f5e8d9, #eacda3);
+    color: #333;
+    width: 100%; /* Changed from 100vw */
+    overflow-x: hidden; /* Added to prevent horizontal scroll */
+  }
+  
+  .about-section {
+    max-width: 1200px; /* Changed from fixed width */
+    margin: 0 auto; /* Center the section */
+    padding: 0 20px; /* Add padding instead of margin */
+  }
+  
+  .about-section p {
+    font-size: large;
+  }
+  
+  body, html {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Hero Section */
+  .hero {
+    max-width: 1200px; /* Added max-width */
+    margin: 0 auto; /* Center the hero section */
+    margin-bottom: 30px;;
+    color: white;
+    padding: 30px 20px;
+    border-radius: 10px;
+    position: relative;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+    background: linear-gradient(135deg, #654ea3, #eaafc8);
+    height: 200px;
+  }
+  h2{
+    margin-bottom: 20px;
+    font-size: x-large;
+    font-weight: bold;
+  }
+  .visual-story h2{
+    margin-bottom: 20px;
+  }
+  
+  /* Keep all other hero styles the same */
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+  }
+  
+  .hero h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgba(255, 85, 0, 0.747);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 5px;
+    position: relative; /* Added to ensure text appears above overlay */
+    z-index: 1;
+  }
+  
+  .hero p {
+    font-size: 1rem;
+    margin-top: 8px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Visual Story Section */
+  .visual-story {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 175px;
+    padding: 15px 20px 0;
+  }
+  
+  .story-steps {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  /* How It Works Section */
+  .how-it-works {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 50px 20px;
+    height: 400px;
+  }
+  
+  .steps {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+  }
+  
+  /* Features Section */
+  .features {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 40px 20px;
+    height: 400px;
+  }
+  .feature{
+    height: 250px;
+  }
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    margin: 0 auto;
+  }
+  
+  /* Tech Stack Section */
+  .tech-stack {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 40px 20px;
+  }
+  
+  /* Join Section */
+  .join {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 40px 20px;
+    height: 250px;
+  }
+  
+  /* Keep all other styles exactly the same */
+  .step {
+    max-width: 250px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+    height: 240px;
+  }
+  
+  .step:hover {
+    transform: scale(1.05);
+  }
+  
+  .icon {
+    font-size: 40px;
+    color: #ff6600;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center; /* Centers the icon horizontally */
+    align-items: center; /* Centers the icon vertically */
+    width: 100%;
+}
+
+  
+  .feature {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+    width: 350px;
+  }
+  
+  .feature:hover {
+    transform: scale(1.05);
+  }
+  
+  .tech-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 20px;
+    
+  }
+  
+ .tech-icons div {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers content horizontally */
+    justify-content: center; /* Centers content vertically */
+    text-align: center;
+    width: 200px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+  
+  .btn {
+    display: flex;
+    flex-direction: row;
+    margin: 50px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8px;
+    margin-bottom: 17px;
+  }
+  
+  .cta-btn {
+    background: linear-gradient(135deg, #0d5293, #2958b7);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 1rem;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    margin-right: 20px;
+    margin-bottom: 15px;
+    
+  }
+  
+  .cta-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  .join p {
+    font-size: x-large;
+  }
+  
+  /* Section Styles */
+  .about-section, .how-it-works, .features, .tech-stack, .join {
+    margin-top: 50px;
+    padding: 30px 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+  }
+  .content-card{
+    height:250px;
+  }
+  .content-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
