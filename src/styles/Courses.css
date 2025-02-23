@@ -1,0 +1,221 @@
+/* Course Listing Page Styles */
+
+/* Main container animations */
+.course-container {
+    animation: fadeIn 0.3s ease-in;
+  }
+  
+  /* Search bar effects */
+  .search-container input {
+    transition: all 0.3s ease;
+    background: #f8fafc;
+  }
+  
+  .search-container input:focus {
+    background: white;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  }
+  
+  /* Course card animations and effects */
+  .course-card {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .course-card:hover {
+    transform: translateY(-4px);
+  }
+  
+  .course-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #3b82f6, #60a5fa);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .course-card:hover::after {
+    opacity: 1;
+  }
+  
+  /* Course image hover effect */
+  .course-image-container {
+    overflow: hidden;
+  }
+  
+  .course-image {
+    transition: transform 0.5s ease;
+  }
+  
+  .course-image:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Tag animations */
+  .course-tag {
+    transition: all 0.2s ease;
+  }
+  
+  .course-tag:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Button effects */
+  .enroll-button {
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .enroll-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.4s ease, height 0.4s ease;
+  }
+  
+  .enroll-button:hover::before {
+    width: 200%;
+    height: 200%;
+  }
+  
+  /* Bookmark button animation */
+  .bookmark-button {
+    transition: all 0.2s ease;
+  }
+  
+  .bookmark-button:hover {
+    transform: scale(1.1);
+  }
+  
+  .bookmark-button.active {
+    animation: bookmarkPop 0.3s ease;
+  }
+  
+  /* Filter dropdown styling */
+  .filter-select {
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+  
+  .filter-select:hover {
+    border-color: #60a5fa;
+  }
+  
+  /* Expanded content animation */
+  .expanded-content {
+    animation: slideDown 0.3s ease;
+  }
+  
+  /* Loading state animation */
+  .loading-skeleton {
+    background: linear-gradient(90deg, #f3f4f6 0%, #e5e7eb 50%, #f3f4f6 100%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+  }
+  
+  /* Responsive grid adjustments */
+  @media (max-width: 768px) {
+    .course-grid {
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes bookmarkPop {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes loading {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
+  
+  /* Custom scrollbar */
+  .course-container::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .course-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+  }
+  
+  .course-container::-webkit-scrollbar-thumb {
+    background: #c5c5c5;
+    border-radius: 4px;
+  }
+  
+  .course-container::-webkit-scrollbar-thumb:hover {
+    background: #a5a5a5;
+  }
+  
+  /* Accessibility improvements */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+  
+  /* Print styles */
+  @media print {
+    .course-card {
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+    
+    .enroll-button,
+    .bookmark-button,
+    .filter-select {
+      display: none;
+    }
+  }
